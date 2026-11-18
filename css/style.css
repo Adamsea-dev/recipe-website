@@ -1,0 +1,761 @@
+/* ===== Colours ===== */
+:root {
+    --primary-color: #bf5b23;
+    --light: #ededed;
+    --dark: #373737;
+    --dark-bg: #111111;
+
+    /* category colours */
+    --seafood: #3e30e2;
+    --chicken: #299c8e;
+    --meats: #d09189;
+    --veg: #298f3f;
+    --dessert: #9374eb;
+    --misc: #9a951e;
+    --pasta: #bf5b23;
+}
+
+/* ===== Reset ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: var(--dark-bg);
+    color: var(--light);
+    line-height: 1.5;
+}
+
+img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+a {
+    color: inherit;
+}
+
+/* Centered content, max 1280px */
+.wrapper {
+    width: 90%;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.page {
+    padding: 60px 0;
+}
+
+h1 {
+    font-size: 40px;
+    text-transform: uppercase;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+
+.small-text {
+    font-size: 12px;
+    margin: 8px 0;
+}
+
+.orange {
+    color: #f49b62;
+}
+
+/* ===== Buttons ===== */
+.button {
+    display: inline-block;
+    background-color: var(--dark);
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 12px;
+    padding: 10px 20px;
+    border-radius: 3px;
+    transition: 0.3s;
+}
+
+.button:hover {
+    color: var(--primary-color);
+}
+
+/* ===== Navigation ===== */
+.navigation {
+    background-color: var(--dark-bg);
+    padding: 25px 0;
+    border-bottom: 1px solid #343434;
+}
+
+/* on the home page the menu lies on top of the hero image */
+.home-nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #00000088;
+    border: none;
+}
+
+.navigation a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 13px;
+    padding: 0 12px;
+    border-right: 1px solid var(--light);
+}
+
+.navigation a:first-child {
+    padding-left: 0;
+}
+
+.navigation a:last-child {
+    border: none;
+}
+
+.navigation a:hover,
+.navigation a.active {
+    color: #f49b62;
+}
+
+/* ===== Hero ===== */
+.hero {
+    min-height: 650px;
+    padding-top: 220px;
+    background-image: linear-gradient(90deg, #000000cc, #00000022), url("https://picsum.photos/1920/800");
+    background-size: cover;
+    background-position: center;
+}
+
+.hero h1 {
+    font-size: 44px;
+    font-weight: 400;
+    line-height: 1.15;
+}
+
+.hero h1 a {
+    text-decoration: none;
+}
+
+.hero h1 a:hover {
+    color: #f49b62;
+}
+
+/* ===== Search box ===== */
+.search-box {
+    display: flex;
+    max-width: 420px;
+    margin-top: 50px;
+    border: 1px solid var(--light);
+    border-radius: 5px;
+}
+
+.search-box input {
+    flex: 1;
+    min-width: 0;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--light);
+    padding: 10px 15px;
+    font-size: 16px;
+}
+
+.search-box input::placeholder {
+    color: var(--light);
+}
+
+.search-box button {
+    background: transparent;
+    border: none;
+    color: var(--light);
+    font-size: 26px;
+    padding: 0 12px;
+    cursor: pointer;
+}
+
+/* ===== Headlines ===== */
+.headline {
+    font-size: 36px;
+    text-transform: uppercase;
+    border-bottom: 1px solid var(--light);
+    margin: 70px 0 20px;
+    padding-bottom: 8px;
+}
+
+/* ===== Recipe cards ===== */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.card {
+    background-color: var(--light);
+    color: var(--dark);
+    display: flex;
+    flex-direction: column;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    height: 200px;
+}
+
+.card-text {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+}
+
+.card-text h3 {
+    text-transform: uppercase;
+    font-size: 19px;
+    margin-bottom: 10px;
+}
+
+.card-text p {
+    font-size: 14px;
+}
+
+.card-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    padding-left: 10px;
+    border-left: 2px solid;
+    text-transform: uppercase;
+}
+
+.card-bottom p {
+    font-size: 11px;
+}
+
+/* category colour = text colour and border colour */
+.seafood { border-color: var(--seafood); }
+.seafood span, .seafood .tag { color: var(--seafood); }
+.chicken { border-color: var(--chicken); }
+.chicken span, .chicken .tag { color: var(--chicken); }
+.meats { border-color: var(--meats); }
+.meats span, .meats .tag { color: var(--meats); }
+.veg { border-color: var(--veg); }
+.veg span, .veg .tag { color: var(--veg); }
+.dessert { border-color: var(--dessert); }
+.dessert span, .dessert .tag { color: var(--dessert); }
+.misc { border-color: var(--misc); }
+.misc span, .misc .tag { color: var(--misc); }
+.pasta { border-color: var(--pasta); }
+.pasta span, .pasta .tag { color: var(--pasta); }
+
+/* ===== Categories ===== */
+.categories {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    background-color: var(--light);
+    color: var(--dark);
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.categories a {
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 10px;
+    line-height: 2.5;
+}
+
+.categories a:hover {
+    color: var(--primary-color);
+}
+
+/* ===== Image section ===== */
+.image-section {
+    margin-top: 70px;
+    padding: 130px 0 50px;
+    background-image: url("https://picsum.photos/1920/400");
+    background-size: cover;
+    background-position: center;
+    clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 100%);
+}
+
+.image-box {
+    background-color: var(--light);
+    color: var(--dark-bg);
+    padding: 30px;
+    max-width: 450px;
+    margin-left: auto;
+}
+
+.image-box h4 {
+    color: var(--primary-color);
+    font-size: 22px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+/* ===== Text + image rows ===== */
+.row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.row img {
+    height: 100%;
+    min-height: 350px;
+}
+
+/* text is in the middle of the box, like in Figma */
+.row-text {
+    background-color: var(--light);
+    color: var(--dark);
+    padding: 40px 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.row-text h4 {
+    color: var(--primary-color);
+    font-size: 22px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.row-text p {
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.row-text .tag {
+    margin-bottom: 10px;
+}
+
+.row-text .button {
+    width: 120px;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.tag {
+    font-size: 12px;
+    font-weight: 700;
+    border-left: 2px solid var(--primary-color);
+    padding-left: 8px;
+}
+
+/* ===== Recipe page ===== */
+.recipe-top {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: start;
+}
+
+.recipe-top strong {
+    display: block;
+    font-weight: 700;
+}
+
+.recipe-facts {
+    display: flex;
+    justify-content: space-between;
+    max-width: 500px;
+    margin: 50px 0;
+    font-size: 14px;
+}
+
+/* orange icons */
+.recipe-facts b {
+    color: var(--primary-color);
+    margin-right: 6px;
+}
+
+.small-heading {
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.ingredients {
+    columns: 2;
+    column-gap: 30px;
+    padding-left: 15px;
+    font-size: 13px;
+}
+
+.ingredients li {
+    margin-bottom: 4px;
+}
+
+.recipe-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+.outline-button {
+    background: transparent;
+    color: var(--light);
+    border: 1px solid var(--light);
+    border-radius: 5px;
+    padding: 6px 12px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.outline-button:hover {
+    color: #f49b62;
+    border-color: #f49b62;
+}
+
+/* Favorite – only CSS: the checkbox is hidden, the label shows the heart */
+#favorite {
+    display: none;
+}
+
+#favorite + label::before {
+    content: "♡ ";
+}
+
+#favorite:checked + label {
+    color: #f49b62;
+    border-color: #f49b62;
+}
+
+#favorite:checked + label::before {
+    content: "♥ ";
+}
+
+.round-image {
+    border-radius: 50%;
+    aspect-ratio: 1;
+}
+
+.section-heading {
+    font-size: 36px;
+    text-transform: uppercase;
+    border-bottom: 1px solid #707070;
+    padding-bottom: 10px;
+    margin: 70px 0 30px;
+}
+
+.instructions {
+    padding-left: 20px;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.instructions li {
+    margin-bottom: 25px;
+}
+
+/* ===== Tabs (about) – only CSS ===== */
+.tabs {
+    margin: 50px 0;
+}
+
+/* the radio buttons are hidden, we click the labels */
+.tabs input {
+    display: none;
+}
+
+.tab-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #707070;
+    margin-bottom: 30px;
+}
+
+.tab-buttons label {
+    border-bottom: 3px solid transparent;
+    font-size: 18px;
+    text-transform: uppercase;
+    padding: 12px 20px;
+    cursor: pointer;
+}
+
+.tab-buttons label:hover {
+    color: #f49b62;
+}
+
+/* the label of the checked radio is orange */
+#tab-story:checked ~ .tab-buttons label[for="tab-story"],
+#tab-team:checked ~ .tab-buttons label[for="tab-team"],
+#tab-contact:checked ~ .tab-buttons label[for="tab-contact"] {
+    color: #f49b62;
+    border-bottom-color: var(--primary-color);
+}
+
+/* all panels are hidden ... */
+.tab-panel {
+    display: none;
+}
+
+/* ... only the panel of the checked radio is visible */
+#tab-story:checked ~ #story,
+#tab-team:checked ~ #team,
+#tab-contact:checked ~ #contact {
+    display: block;
+}
+
+/* ===== Team (about) ===== */
+.team {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    text-align: center;
+}
+
+.team-member img {
+    max-width: 220px;
+    margin: 0 auto 15px;
+}
+
+/* ===== Search page ===== */
+.search-top {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #343434;
+}
+
+.search-title {
+    font-size: 22px;
+    font-weight: 400;
+    margin: 20px 0 10px;
+}
+
+.search-top .search-box {
+    margin-top: 0;
+}
+
+.filter-box {
+    background: linear-gradient(90deg, #222222, #111111);
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.filter-box h2 {
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+.filter-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+}
+
+.filter-options label {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.filter-options input {
+    width: 20px;
+    height: 20px;
+    accent-color: var(--primary-color);
+}
+
+.results {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.result {
+    padding: 30px 0;
+    border-bottom: 1px solid #343434;
+}
+
+.result h2 {
+    font-size: 20px;
+    text-transform: uppercase;
+    color: var(--primary-color);
+    margin: 8px 0;
+}
+
+.result h2 a {
+    text-decoration: none;
+}
+
+.result h2 a:hover {
+    text-decoration: underline;
+}
+
+/* category filter – only CSS:
+   when a radio is checked, hide every result of other categories */
+main:has(input[value="veg"]:checked) .result:not(.veg),
+main:has(input[value="seafood"]:checked) .result:not(.seafood),
+main:has(input[value="pasta"]:checked) .result:not(.pasta),
+main:has(input[value="chicken"]:checked) .result:not(.chicken),
+main:has(input[value="misc"]:checked) .result:not(.misc),
+main:has(input[value="meats"]:checked) .result:not(.meats),
+main:has(input[value="dessert"]:checked) .result:not(.dessert) {
+    display: none;
+}
+
+/* line before "Category" has the colour of the category */
+.result .tag {
+    border-left-color: inherit;
+}
+
+.result .tag span {
+    text-transform: uppercase;
+}
+
+.result > p:last-child {
+    font-size: 14px;
+}
+
+/* ===== Footer ===== */
+.footer {
+    background-color: var(--primary-color);
+    color: var(--dark-bg);
+    padding: 45px 0;
+    margin-top: 60px;
+    font-size: 14px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.footer a {
+    display: block;
+    text-decoration: none;
+    padding: 3px 0;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* ===== Tablet ===== */
+@media (max-width: 1024px) {
+    .cards {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .recipe-top,
+    .search-top {
+        gap: 30px;
+    }
+}
+
+/* ===== Mobile ===== */
+@media (max-width: 640px) {
+    h1, .hero h1 {
+        font-size: 30px;
+    }
+
+    .headline {
+        font-size: 24px;
+        margin-top: 40px;
+    }
+
+    .navigation a {
+        font-size: 11px;
+        padding: 0 8px;
+    }
+
+    .hero {
+        min-height: 550px;
+        padding-top: 160px;
+    }
+
+    /* everything in one column on the phone */
+    .cards,
+    .row,
+    .recipe-top,
+    .search-top,
+    .team,
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .search-top {
+        gap: 30px;
+    }
+
+    .filter-options label {
+        font-size: 13px;
+        gap: 10px;
+    }
+
+    .row img {
+        min-height: 240px;
+        height: 240px;
+    }
+
+    /* text always above the image on mobile */
+    .row-text {
+        order: -1;
+        padding: 25px;
+    }
+
+    .recipe-top {
+        gap: 30px;
+    }
+
+    /* round picture on top, smaller */
+    .recipe-top .round-image {
+        order: -1;
+        max-width: 280px;
+        margin: 0 auto;
+    }
+
+    .recipe-facts {
+        flex-wrap: wrap;
+        gap: 15px;
+        margin: 30px 0;
+    }
+
+    .ingredients {
+        columns: 1;
+    }
+
+    .section-heading {
+        font-size: 26px;
+        margin-top: 50px;
+    }
+
+    .search-box {
+        max-width: 100%;
+    }
+
+    .result h2 {
+        font-size: 18px;
+    }
+
+    .image-section {
+        padding-top: 80px;
+        clip-path: polygon(0 0, 100% 8%, 100% 100%, 0 100%);
+    }
+
+    .tab-buttons label {
+        font-size: 15px;
+        padding: 10px 12px;
+    }
+}

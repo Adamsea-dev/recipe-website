@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Bender's kitchen</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navigation">
+        <div class="wrapper">
+            <a href="index.html">Home</a>
+            <a href="recipe-detail.html">Recipes</a>
+            <a href="search.html">Search</a>
+            <a href="about.html" class="active">About</a>
+        </div>
+    </nav>
+
+    <main class="wrapper page">
+        <p class="small-text orange">Good food. Shiny recipes.</p>
+        <h1>About us</h1>
+        <p>Everything you want to know about Bender's kitchen.</p>
+
+        <!-- Tabs: Story / Team / Contact (only CSS, no JavaScript)
+             the hidden radio buttons remember which tab is open,
+             the labels are the tab buttons you click -->
+        <section class="tabs">
+            <input type="radio" name="tabs" id="tab-story" checked>
+            <input type="radio" name="tabs" id="tab-team">
+            <input type="radio" name="tabs" id="tab-contact">
+
+            <div class="tab-buttons">
+                <label for="tab-story">Our story</label>
+                <label for="tab-team">Team</label>
+                <label for="tab-contact">Contact</label>
+            </div>
+
+            <div class="tab-panel" id="story">
+                <div class="row">
+                    <div class="row-text">
+                        <p class="tag">About / 01</p>
+                        <h4>How it started</h4>
+                        <p>Bender's kitchen started as a school project in our first semester. We wanted a website with recipes that are simple, cheap and fun to cook – even for students with a tiny kitchen.</p>
+                        <p>Today you can find soups, pasta, desserts and much more. Every recipe is tested by us.</p>
+                    </div>
+                    <img src="https://picsum.photos/640/500?random=1" alt="Food on a table">
+                </div>
+            </div>
+
+            <div class="tab-panel" id="team">
+                <div class="team">
+                    <div class="team-member">
+                        <img class="round-image" src="https://picsum.photos/300/300?random=21" alt="Adam">
+                        <h3>Adam</h3>
+                        <p>Head chef</p>
+                    </div>
+                    <div class="team-member">
+                        <img class="round-image" src="https://picsum.photos/300/300?random=22" alt="Peter">
+                        <h3>Peter</h3>
+                        <p>Food photographer</p>
+                    </div>
+                    <div class="team-member">
+                        <img class="round-image" src="https://picsum.photos/300/300?random=23" alt="Adam">
+                        <h3>Adam</h3>
+                        <p>Web designer</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-panel" id="contact">
+                <div class="row">
+                    <img src="https://picsum.photos/640/500?random=3" alt="Chef making a salad">
+                    <div class="row-text">
+                        <p class="tag">About / 03</p>
+                        <h4>Get in touch</h4>
+                        <p>Do you have a recipe we should try? Write to us!</p>
+                        <p>Email: hello@benderskitchen.com<br>Phone: +45 12 34 56 78<br>Address: Kitchen street 1, Copenhagen</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="wrapper footer-grid">
+            <div>
+                <p><strong>Bender's kitchen</strong></p>
+                <p>Good food. Shiny recipes.</p>
+            </div>
+            <div>
+                <a href="index.html">Home</a>
+                <a href="recipe-detail.html">Recipes</a>
+                <a href="search.html">Search</a>
+                <a href="about.html">About</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

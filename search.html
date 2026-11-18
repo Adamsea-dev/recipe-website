@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search | Bender's kitchen</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navigation">
+        <div class="wrapper">
+            <a href="index.html">Home</a>
+            <a href="recipe-detail.html">Recipes</a>
+            <a href="search.html" class="active">Search</a>
+            <a href="about.html">About</a>
+        </div>
+    </nav>
+
+    <main class="wrapper page">
+        <!-- Search + filter -->
+        <section class="search-top">
+            <div>
+                <h1 class="search-title">Full search</h1>
+                <div class="search-box">
+                    <button type="button">⌕</button>
+                    <input type="text" placeholder="Search">
+                </div>
+                <p class="small-text">Let's go already!</p>
+            </div>
+
+            <!-- Category filter: only CSS (see style.css "category filter") -->
+            <div class="filter-box">
+                <h2>Search filter : category</h2>
+                <div class="filter-options">
+                    <label><input type="radio" name="category" value="all" checked> All</label>
+                    <label><input type="radio" name="category" value="pasta"> Pasta</label>
+                    <label><input type="radio" name="category" value="seafood"> Seafood</label>
+                    <label><input type="radio" name="category" value="veg"> Vegetarian</label>
+                    <label><input type="radio" name="category" value="meats"> Beef/Pork</label>
+                    <label><input type="radio" name="category" value="dessert"> Dessert</label>
+                    <label><input type="radio" name="category" value="chicken"> Chicken</label>
+                    <label><input type="radio" name="category" value="misc"> Snacks</label>
+                </div>
+            </div>
+        </section>
+
+        <!-- Results -->
+        <section class="results">
+            <article class="result veg">
+                <p class="tag">Category: <span>Vegetarian</span></p>
+                <h2><a href="recipe-detail.html">Boozy brown lentil soup</a></h2>
+                <p>A warming bowl of brown lentils, tomatoes and vegetables. Simple, hearty and full of flavour. Perfect for cold evenings ...</p>
+            </article>
+
+            <article class="result seafood">
+                <p class="tag">Category: <span>Seafood</span></p>
+                <h2><a href="recipe-detail.html">Crap'tacular</a></h2>
+                <p>Garlic and lemon prawns in a quick tomato sauce. Serve with crusty bread and a fresh green salad ...</p>
+            </article>
+
+            <article class="result chicken">
+                <p class="tag">Category: <span>Chicken</span></p>
+                <h2><a href="recipe-detail.html">Chick'tastic</a></h2>
+                <p>Golden oven-baked chicken with lemon, herbs and roasted vegetables. Easy to make on a weekday ...</p>
+            </article>
+
+            <article class="result dessert">
+                <p class="tag">Category: <span>Dessert</span></p>
+                <h2><a href="recipe-detail.html">Dessert'alicious</a></h2>
+                <p>A creamy yoghurt dessert layered with berries and crunchy biscuits. Ready in only ten minutes ...</p>
+            </article>
+
+            <article class="result meats">
+                <p class="tag">Category: <span>Beef/Pork</span></p>
+                <h2><a href="recipe-detail.html">Spicy meat'abowl</a></h2>
+                <p>A rich beef and tomato bowl with beans, chilli and rice. Warm, spicy and very filling ...</p>
+            </article>
+
+            <article class="result pasta">
+                <p class="tag">Category: <span>Pasta</span></p>
+                <h2><a href="recipe-detail.html">Tomato twist pasta</a></h2>
+                <p>An easy tomato and basil pasta for a quick dinner. Finish it with some grated cheese ...</p>
+            </article>
+
+            <article class="result misc">
+                <p class="tag">Category: <span>Snacks</span></p>
+                <h2><a href="recipe-detail.html">Crunchy avocado toast</a></h2>
+                <p>Crisp toast with avocado, lemon and a pinch of chilli. The perfect quick snack ...</p>
+            </article>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="wrapper footer-grid">
+            <div>
+                <p><strong>Bender's kitchen</strong></p>
+                <p>Good food. Shiny recipes.</p>
+            </div>
+            <div>
+                <a href="index.html">Home</a>
+                <a href="recipe-detail.html">Recipes</a>
+                <a href="search.html">Search</a>
+                <a href="about.html">About</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

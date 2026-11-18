@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Bender's kitchen</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navigation home-nav">
+        <div class="wrapper">
+            <a href="index.html" class="active">Home</a>
+            <a href="recipe-detail.html">Recipes</a>
+            <a href="search.html">Search</a>
+            <a href="about.html">About</a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="hero">
+        <div class="wrapper">
+            <p class="small-text">#1 Benders most shiny recipe</p>
+            <h1>Boozy brown<br><a href="recipe-detail.html"><strong>Lentil soup</strong></a></h1>
+            <p class="small-text">40% healthy</p>
+
+            <form class="search-box" action="search.html">
+                <input type="text" name="q" placeholder="Search">
+                <button type="submit">⌕</button>
+            </form>
+            <p class="small-text">Let's get cooking!</p>
+        </div>
+    </header>
+
+    <main>
+        <!-- Today's recipes -->
+        <section class="wrapper">
+            <h2 class="headline">Today's recipes</h2>
+
+            <div class="cards">
+                <article class="card">
+                    <img src="https://picsum.photos/600/400?random=11" alt="Prawns in tomato sauce">
+                    <div class="card-text">
+                        <h3>Crap'tacular</h3>
+                        <p>Garlic and lemon prawns in a quick tomato sauce. Serve with crusty bread.</p>
+                        <div class="card-bottom seafood">
+                            <p><span>Seafood</span><br>Recipe</p>
+                            <a class="button" href="recipe-detail.html">How to</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img src="https://picsum.photos/600/400?random=12" alt="Baked chicken">
+                    <div class="card-text">
+                        <h3>Chick'tastic</h3>
+                        <p>Golden oven-baked chicken with lemon, herbs and roasted vegetables.</p>
+                        <div class="card-bottom chicken">
+                            <p><span>Chicken</span><br>Recipe</p>
+                            <a class="button" href="recipe-detail.html">How to</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img src="https://picsum.photos/600/400?random=13" alt="Yoghurt dessert">
+                    <div class="card-text">
+                        <h3>Dessert'alicious</h3>
+                        <p>A creamy yoghurt dessert layered with berries and crunchy biscuits.</p>
+                        <div class="card-bottom dessert">
+                            <p><span>Dessert</span><br>Recipe</p>
+                            <a class="button" href="recipe-detail.html">How to</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img src="https://picsum.photos/600/400?random=14" alt="Beef bowl">
+                    <div class="card-text">
+                        <h3>Spicy meat'abowl</h3>
+                        <p>A rich beef and tomato bowl with beans, chilli and rice.</p>
+                        <div class="card-bottom meats">
+                            <p><span>Beef/Pork</span><br>Recipe</p>
+                            <a class="button" href="recipe-detail.html">How to</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Categories -->
+        <section class="wrapper">
+            <h2 class="headline">Category selection</h2>
+
+            <div class="categories">
+                <a href="search.html?category=veg">🥗<br>Vegetarian</a>
+                <a href="search.html?category=seafood">🐟<br>Seafood</a>
+                <a href="search.html?category=pasta">🍝<br>Pasta</a>
+                <a href="search.html?category=chicken">🍗<br>Chicken</a>
+                <a href="search.html?category=misc">🥪<br>Snacks</a>
+                <a href="search.html?category=meats">🥩<br>Beef/Pork</a>
+                <a href="search.html?category=dessert">🍰<br>Dessert</a>
+            </div>
+        </section>
+
+        <!-- Image section -->
+        <section class="image-section">
+            <div class="wrapper">
+                <div class="image-box">
+                    <h4>All-star showdown</h4>
+                    <p>Big brawl in the kitchen. Who takes it? Winner gets to take home the desserts!</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- In the kitchen -->
+        <section class="wrapper">
+            <h2 class="headline">In the kitchen</h2>
+
+            <div class="row">
+                <div class="row-text">
+                    <p class="tag">In the kitchen</p>
+                    <h4>How to plate as a pro</h4>
+                    <p>Big brawl in kitchen. Who takes it?<br>Winner gets to take home the desserts!<br>Losers can wave goodbye!</p>
+                    <a class="button" href="recipe-detail.html">Plating</a>
+                </div>
+                <img src="https://picsum.photos/640/400?random=1" alt="Chef plating a salad">
+            </div>
+
+            <div class="row">
+                <img src="https://picsum.photos/640/400?random=2" alt="Ingredients and a recipe notebook">
+                <div class="row-text">
+                    <p class="tag">In the kitchen</p>
+                    <h4>Recipes are for...</h4>
+                    <p>Big brawl in kitchen. Who takes it?<br>Winner gets to take home the desserts!<br>Losers can wave goodbye!</p>
+                    <a class="button" href="recipe-detail.html">Recipe</a>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="row-text">
+                    <p class="tag">In the kitchen</p>
+                    <h4>Meats - How to baste</h4>
+                    <p>Big brawl in kitchen. Who takes it?<br>Winner gets to take home the desserts!<br>Very scrumptious!</p>
+                    <a class="button" href="search.html?category=meats">Guides</a>
+                </div>
+                <img src="https://picsum.photos/640/400?random=3" alt="Chef cooking meat">
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="wrapper footer-grid">
+            <div>
+                <p><strong>Bender's kitchen</strong></p>
+                <p>Good food. Shiny recipes.</p>
+            </div>
+            <div>
+                <a href="index.html">Home</a>
+                <a href="recipe-detail.html">Recipes</a>
+                <a href="search.html">Search</a>
+                <a href="about.html">About</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
